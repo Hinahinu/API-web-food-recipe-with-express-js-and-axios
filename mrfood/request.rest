@@ -1,0 +1,106 @@
+# Request in table user
+GET http://localhost:5000/user
+
+###
+GET http://localhost:5000/user/3
+
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "email": "alpan@gmail.com",
+    "password": "alpan"
+}
+
+###
+PATCH http://localhost:5000/user/1
+Content-Type: application/json
+
+{
+    "email": "joni@gmail.com",
+    "password": "joni"
+}
+
+###
+DELETE  http://localhost:5000/user/2
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "alpan@gmail.com",
+    "password": "aidil"
+}
+
+# Request in table recipe
+
+###
+GET http://localhost:5000/recipe
+
+###
+GET http://localhost:5000/recipe/1
+
+###
+GET http://localhost:5000/recipe/user/1
+
+###
+POST http://localhost:5000/recipe
+Content-Type: application/json
+
+{
+    "id_user": "1",
+    "tittle": "Pais udang",
+    "descriptions": "Terbuat dari daging udang"
+}
+
+###
+PATCH  http://localhost:5000/recipe/1
+Content-Type: application/json
+
+{
+    "id_user": "1",
+    "tittle": "Bakso gajah",
+    "descriptions": "Terbuat dari daging gajah"
+}
+
+###
+DELETE  http://localhost:5000/recipe/1
+
+###
+GET http://localhost:5000/recipe/search/ba
+
+###
+GET http://localhost:5000/recipenewest
+
+###
+GET http://localhost:5000/items?page=1
+
+# Request in table comment
+
+###
+GET http://localhost:5000/comment/8
+
+###
+POST http://localhost:5000/comment
+Content-Type: application/json
+
+{
+    "id_user": "3",
+    "id_recipe": "4",
+    "comment": "Waw sangat bermanfaat bagi kami kaum pecinta indomie"
+}
+
+###
+PATCH  http://localhost:5000/comment/9
+Content-Type: application/json
+
+{
+    "id_user": "3",
+    "id_recipe": "8",
+    "comment": "Waw sangat bermanfaat bagi kami kaum pecinta rebahan"
+}
+
+###
+DELETE  http://localhost:5000/comment/9
